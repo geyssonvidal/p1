@@ -1,7 +1,7 @@
 @extends('base')
 @section('nombre')
-Dashboard
+contactenos
 @endsection
 @section('contenido')
-contenido de dashbaord
+pagina de contactenos
 @endsection
