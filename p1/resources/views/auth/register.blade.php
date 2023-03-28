@@ -54,7 +54,7 @@
             <div class="flex items-center justify-end mt-4">
                 
 
-                <x-primary-button class="ml-4">
+                <x-primary-button class="ml-4 bg-indigo-800/75">
                     {{ __('Register') }}
                 </x-primary-button>
             </div>

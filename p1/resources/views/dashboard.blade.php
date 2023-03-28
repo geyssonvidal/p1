@@ -1,6 +1,6 @@
 @extends('base')
 @section('nombre')
-Dashboard
+<!--Dashboard-->
 @endsection
 @section('contenido')
 contenido de dashbaord
