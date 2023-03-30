@@ -10,6 +10,7 @@
         </a>
     </div>
     <hr class="horizontal dark mt-0">
+    
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -18,8 +19,28 @@
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                     </div>
+
                     <span class="nav-link-text ms-1">Dashboard</span>
+                    
                 </a>
+                
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+                    </div>
+
+                    <span class="nav-link-text ms-1">Dashboard</span>
+                    
+                </a>
+                
+                <ul class="ps-5 dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top:0px;">
+                  <li><a class="dropdown-item {{ Route::currentRouteName() == 'products-register' ? 'active' : '' }}" href="{{ route('products-register') }}">Register Product</a></li>
+                  <li><a class="dropdown-item {{ Route::currentRouteName() == 'products-list' ? 'active' : '' }}" href="{{ route('products-list') }}">List Products</a></li>
+                  
+                </ul>
             </li>
             <li class="nav-item mt-3 d-flex align-items-center">
                 <div class="ps-4">
