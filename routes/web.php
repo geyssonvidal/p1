@@ -53,7 +53,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword; 
-use App\Http\Controllers\ProductoController;            
+use App\Http\Controllers\ProductoController;      
+use App\Http\Controllers\ProductListController; 
+use App\Http\Controllers\ContactController;            
+
+
 
             
 
@@ -67,6 +71,11 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 	Route::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');
 	Route::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');
 	Route::get('/dashboard', [HomeController::class, 'index'])->name('home')->middleware('auth');
+	
+	Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+	Route::post('/contact', [ContactController::class, 'contactInsert'])->name('contact');
+
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');
 	Route::get('/rtl', [PageController::class, 'rtl'])->name('rtl');
@@ -80,7 +89,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/products-register', [ProductoController::class, 'productsRegister'])->name('products-register');
 	Route::Post('/products-register', [ProductoController::class, 'registerProds'])->name('products-register');
-	Route::get('/products-list', [ProductoController::class, 'productsList'])->name('products-list');
+	Route::get('/products', [ProductListController::class, 'productsList'])->name('products-list');
+	
+
 
 
 

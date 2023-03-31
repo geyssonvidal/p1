@@ -28,6 +28,7 @@
                                         //$lisst = "hola";
                                         //echo var_dump($listProducts);
                                         //dd($lisst);
+                                        //foreach
                                     @endphp
                                     
                                    

@@ -25,13 +25,7 @@ class ProductoController extends Controller
         Producto::updateOrInsert(['nombre'=>$prodName], ['precio'=>$prodPrice]);
         return redirect("products-register");
     }
-    public function productsList(){
-        $lisst = 'hola';
-        //dd($lisst);
-        $listprod = Producto::All();
-        return view("products",compact('listprod'));
-        //return "mesanje de prueba";
-    }
+    
 
     
 }

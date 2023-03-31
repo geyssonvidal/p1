@@ -28,6 +28,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link me-2" href="{{ route('contact') }}">
+                                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
+                                    Contactenos
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link me-2" href="{{ route('register') }}">
                                     <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
                                     Sign Up
