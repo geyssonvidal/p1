@@ -16,10 +16,15 @@ class ContactController extends Controller
     }
     public function contactInsert(Request $request){
         if($request->hasFile('contactImage')) {
+            
             $imagen = $request->file('contactImage');
 
-            $ruta_imagen = $imagen->store('public/img/imgcontacts');
+
+            $fileName = $imagen->getClientOriginalName();
             
+            $imagen->move(public_path('assets/images/imgcontacts'), $fileName);
+
+            $image_url = asset('/assets/images/imgcontacts/' . $fileName);
 
         }
         $contact = new Contact;
@@ -28,7 +33,7 @@ class ContactController extends Controller
         $contact->email = $request->input('contactEmail');
         $contact->phone = $request->input('contactPhone');
         $contact->coment = $request->input('contactComent');
-        $contact->image = $ruta_imagen;
+        $contact->image = $image_url;
         
         $contact->save();
         return redirect("contact");
