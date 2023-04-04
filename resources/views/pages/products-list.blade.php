@@ -24,27 +24,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php
-                                        //$lisst = "hola";
-                                        //echo var_dump($listProducts);
-                                        //dd($lisst);
-                                        //foreach
-                                    @endphp
                                     
-                                   
+                                    @foreach ($listprod as $itemlistprod)
                                         <tr>
                                             
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">id</span>
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $itemlistprod->id }}</span>
                                             </td>
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">nombre</span>
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $itemlistprod->nombre }}</span>
                                             </td>
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">precio</span>
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $itemlistprod->precio }}</span>
                                             </td>
                                             
                                         </tr>
+                                    @endforeach
                                     
                                     
                                 </tbody>

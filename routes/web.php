@@ -74,6 +74,7 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 	
 	Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 	Route::post('/contact', [ContactController::class, 'contactInsert'])->name('contact');
+	Route::get('/products', [ProductListController::class, 'productsList'])->name('products-list');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -89,7 +90,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/products-register', [ProductoController::class, 'productsRegister'])->name('products-register');
 	Route::Post('/products-register', [ProductoController::class, 'registerProds'])->name('products-register');
-	Route::get('/products', [ProductListController::class, 'productsList'])->name('products-list');
 	
 
 

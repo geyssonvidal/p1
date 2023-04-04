@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Producto;
 
 class ProductListController extends Controller
 {
     public function productsList(){
-        $lisst = 'hola';
-        //dd($lisst);
+        
         $listprod = Producto::All();
-        return view("products",compact('listprod'));
-        //return "mesanje de prueba";
+        return view("pages.products-list",compact('listprod'));
     }
 }
